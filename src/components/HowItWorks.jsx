@@ -19,7 +19,7 @@ const HowItWorks = () => {
       {
         opacity: 0,
         scale: 2,
-        duration: 2,
+        duration: 1.3,
         ease: "power2.inOut",
       },
       {

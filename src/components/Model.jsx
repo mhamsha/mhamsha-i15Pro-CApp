@@ -131,7 +131,7 @@ const Model = () => {
                     className="w-6 h-6 rounded-full mx-2 cursor-pointer "
                     style={{
                       backgroundColor: item.color[0],
-                      border: focusedColor === item.color[0] ? "2px solid white" : "",
+                      border: focusedColor === item.color[0] ? "3px solid white" : "",
                       
                     }}
                     onClick={() => handleColorClick(item)}

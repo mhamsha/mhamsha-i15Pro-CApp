@@ -5,7 +5,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const animateWithGsap = (name, target, animationProps, scrollProps) => {
   // * play pause resume reset restart complete reverse none
-  // * onEnter onLeave onEnterBack onLeaveBack
   switch (name) {
     case "from":
       gsap.from(target, {
@@ -33,17 +32,14 @@ export const animateWithGsap = (name, target, animationProps, scrollProps) => {
 };
 export const animateWithGsapTimeline = (
   timeline,
-  rotaionRef,
-  rotationState,
-  firstTarget,
-  secondTarget,
-  animationProps
+  { rotationRef, rotationState, firstTarget, secondTarget, animationProps }
 ) => {
-  timeline.to(rotaionRef.current.rotation, {
+  timeline.to(rotationRef.current.rotation, {
     y: rotationState,
     duration: 1,
     ease: "power2.inOut",
   });
+
   timeline.to(
     firstTarget,
     {
@@ -52,6 +48,7 @@ export const animateWithGsapTimeline = (
     },
     "<"
   );
+
   timeline.to(
     secondTarget,
     {

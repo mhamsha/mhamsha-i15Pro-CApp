@@ -10,7 +10,7 @@ const Navbar = () => {
         <div className=" hidden sm:flex">
           {navLists.map((navItem) => (
             <div
-              className="cursor-pointer px-4 text-gray-400 transition-all hover:text-white"
+              className="cursor-pointer px-4 text-sm text-gray-400 transition-all hover:text-white"
               key={navItem}
             >
               {navItem}

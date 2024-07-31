@@ -32,7 +32,7 @@ export const hightlightsSlides = [
   },
   {
     id: 4,
-    textLists: ["All-new Action button.", "What will yours do?."],
+    textLists: ["All-new Action button.", "What will yours do?"],
     video: highlightFourthVideo,
     videoDuration: 3.63,
   },
@@ -71,3 +71,5 @@ export const sizes = [
 ];
 
 export const footerLinks = ["Privacy Policy", "Terms of Use", "Sales Policy", "Legal", "Site Map"];
+
+
