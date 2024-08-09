@@ -14,7 +14,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Hightlights />
-      <Model />
+      {/* <Model /> */}
       <Features />
       <HowItWorks />
       <ImageCarousel />
