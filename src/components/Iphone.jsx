@@ -9,9 +9,10 @@ Title: Apple iPhone 15 Pro Max Black
 import * as THREE from "three";
 import React, { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
+import scene from "/assets/models/scene.glb";
 
 function Model(props) {
-  const { nodes, materials } = useGLTF("/assets/models/scene.glb");
+  const { nodes, materials } = useGLTF(scene);
 
   const unchangeableMaterials = [
     "zFdeDaGNRwzccye",
@@ -20,7 +21,7 @@ function Model(props) {
     "jlzuBkUzuJqgiAK",
     "xNrofRCqOXXHVZt",
   ];
-  
+
   const texture = useTexture(props.item.img);
   useEffect(() => {
     Object.entries(materials).forEach(([name, material]) => {
@@ -29,7 +30,7 @@ function Model(props) {
       }
       material.needsUpdate = true;
     });
-  }, [materials, props.item ]);
+  }, [materials, props.item]);
 
   return (
     <group {...props} dispose={null}>
@@ -256,6 +257,6 @@ function Model(props) {
   );
 }
 
-export default Model; 
+export default Model;
 
-useGLTF.preload("/assets/models/scene.glb");
+useGLTF.preload(scene);
