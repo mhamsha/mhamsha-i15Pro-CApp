@@ -4,7 +4,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/mhamsha-i15Pro-CApp",
   plugins: [
     react(),
     sentryVitePlugin({
@@ -12,6 +11,7 @@ export default defineConfig({
       project: "mhamsha-i15pro-capp",
     }),
   ],
+  base: "/mhamsha-i15Pro-CApp",
 
   build: {
     sourcemap: true,
