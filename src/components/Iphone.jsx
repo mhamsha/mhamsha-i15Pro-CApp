@@ -11,7 +11,7 @@ import React, { useEffect } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 function Model(props) {
-  const { nodes, materials } = useGLTF("/models/scene.glb");
+  const { nodes, materials } = useGLTF("./moduls/scene.glb");
 
   const unchangeableMaterials = [
     "zFdeDaGNRwzccye",
@@ -258,4 +258,4 @@ function Model(props) {
 
 export default Model; 
 
-useGLTF.preload("/models/scene.glb");
+useGLTF.preload("./models/scene.glb");
