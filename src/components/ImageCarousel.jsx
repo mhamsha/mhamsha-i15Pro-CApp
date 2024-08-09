@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { animateWithGsap } from "../utils/animation";
 import { imageCarouselSlides } from "../constants/index";
 
@@ -35,6 +35,25 @@ const ImageCarousel = () => {
     if (currentSlide === 0) return;
     setCurrentSlide((prev) => prev - 1);
   };
+  useEffect(() => {
+    gsap.fromTo(
+      "#image-carousel-container .slide",
+      { x: "140%", opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.inOut",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#image-carousel-container",
+          start: "top center",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   useGSAP(() => {
     gsap.to("#popup-action", {
       duration: 1,
@@ -51,18 +70,6 @@ const ImageCarousel = () => {
         // markers: true,
       },
     });
-
-    // gsap.to("#popup-action-inner", {
-    //   duration: 0.5,
-    //   // scale: 3,
-    //   ease: "power2.inOut",
-    //   scrollTrigger: {
-    //     trigger: "#popup-action",
-    //     start: "top center",
-    //     toggleActions: "play reverse play reverse",
-    //     markers: true,
-    //   },
-    // });
   }, []);
 
   return (
@@ -113,10 +120,10 @@ const ImageCarousel = () => {
           </div>
           <div className="flex  justify-around  mt-8  ">
             <div className=""></div>
-            <div className=" flex justify-around sm:min-w-56 min-w-64 text-left text-gray leading-normal text-xl md:text-3xl">
+            <div className=" flex justify-around text-left text-gray leading-normal text-xl md:text-3xl">
               {imageCarouselSlides.map((slide, index) => (
                 <p
-                  className={`${currentSlide == index ? "image-text-show " : "opacity-0 "}`}
+                  className={`${currentSlide == index ? "image-text-show sm:min-w-96  sm:max-w-96  " : "opacity-0 "}`}
                   key={slide.id}
                 >
                   <span className="text-white">{currentSlide == index ? slide.lensZoom : ""}</span>
