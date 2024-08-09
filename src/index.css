@@ -15,6 +15,7 @@ body {
   height: 100%;
   background: #000;
   border-color: #3b3b3b;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -23,8 +24,8 @@ canvas {
 }
 
 .screen-max-width {
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   max-width: 1120px;
 }
@@ -39,7 +40,7 @@ canvas {
   }
 
   .btn {
-    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
+    @apply px-5 py-2 rounded-3xl  bg-sky-700 my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
   }
 
   .color-container {
@@ -59,7 +60,7 @@ canvas {
   }
 
   .section-heading {
-    @apply text-gray lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20;
+    @apply text-gray lg:text-6xl md:text-4xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20;
   }
 
   .feature-text {
@@ -79,7 +80,7 @@ canvas {
   }
 
   .link {
-    @apply text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
+    @apply text-blue hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20 md:text-base lg:text-xl;
   }
 
   .control-btn {
@@ -115,7 +116,7 @@ canvas {
   }
 
   .video-carousel_container {
-    @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
+    @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[50vh];
   }
 
   .g_fadeIn {
@@ -124,13 +125,18 @@ canvas {
 }
 
 .chip-shimmer {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -200%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(103, 103, 103, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(103, 103, 103, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
   transform: skewX(-40deg);
   z-index: 1;
   pointer-events: none;
@@ -141,4 +147,28 @@ canvas {
 
 .cursor-grabbing {
   cursor: grabbing;
+}
+
+.slide {
+  transition:
+    opacity 0.5s ease-out,
+    height 0.2s ease-out;
+  opacity: 0.5;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide.inactive {
+  opacity: 0.5;
+}
+
+.svg-bold:hover path {
+  stroke-width: 1; /* Adjust this value to make the SVG bolder */
+  stroke: currentColor; /* Use currentColor to inherit the color */
+}
+.image-text-show {
+  transition: opacity 0.8s ease-out;
+  opacity: 1;
 }

@@ -28,6 +28,14 @@ import explore2 from "/assets/images/explore2.jpg";
 import chip from "/assets/images/chip.jpeg";
 import frame from "/assets/images/frame.png";
 
+import pro_lens1 from "/assets/images/imageCarousel/pro_lens1.jpg";
+import pro_lens2 from "/assets/images/imageCarousel/pro_lens2.jpg";
+import pro_lens3 from "/assets/images/imageCarousel/pro_lens3.jpg";
+import pro_lens4 from "/assets/images/imageCarousel/pro_lens4.jpg";
+import pro_lens5 from "/assets/images/imageCarousel/pro_lens5.jpg";
+import pro_lens6 from "/assets/images/imageCarousel/pro_lens6.jpg";
+import pro_lens7 from "/assets/images/imageCarousel/pro_lens7.jpg";
+
 export const heroImg = hero;
 
 export const heroVideo = hmv;
@@ -56,3 +64,11 @@ export const explore1Img = explore1;
 export const explore2Img = explore2;
 export const chipImg = chip;
 export const frameImg = frame;
+
+export const lens1Img = pro_lens1;
+export const lens2Img = pro_lens2;
+export const lens3Img = pro_lens3;
+export const lens4Img = pro_lens4;
+export const lens5Img = pro_lens5;
+export const lens6Img = pro_lens6;
+export const lens7Img = pro_lens7;

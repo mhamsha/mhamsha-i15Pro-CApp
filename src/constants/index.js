@@ -7,6 +7,13 @@ import {
   highlightThirdVideo,
   whiteImg,
   yellowImg,
+  lens1Img,
+  lens2Img,
+  lens3Img,
+  lens4Img,
+  lens5Img,
+  lens6Img,
+  lens7Img,
 } from "../utils";
 
 export const navLists = ["Store", "Mac", "iPhone", "Support"];
@@ -70,6 +77,55 @@ export const sizes = [
   { label: '6.7"', value: "large" },
 ];
 
+export const imageCarouselSlides = [
+  {
+    id: 1,
+    img: lens1Img,
+    alt: "lens1",
+    lensZoom : "0.5x",
+    imgDescription: " Ultra Wide | Macro",
+  },
+  {
+    id: 2,
+    img: lens2Img,
+    alt: "lens2",
+    lensZoom:"0.5x",
+    imgDescription: " Ultra Wide | 13mm",
+  },
+  {
+    id: 3,
+    img: lens3Img,
+    alt: "lens3",
+    lensZoom:"1x",
+    imgDescription: " Main | 24 mm ",
+  },
+  {
+    id: 4,
+    img: lens4Img,
+    alt: "lens4",
+    lensZoom:"1x",
+    imgDescription: " Main | 28 mm",
+  },
+  {
+    id: 5,
+    img: lens5Img,
+    alt: "lens5",
+    lensZoom:"2x",
+    imgDescription: " Telephoto | 48 mm",
+  },
+  {
+    id: 6,
+    img: lens6Img,
+    alt: "lens6",
+    lensZoom:"New 5x",
+    imgDescription: " Telephoto | 120 mm",
+  },
+  {
+    id: 7,
+    img: lens7Img,
+    alt: "lens7",
+    lensZoom:"3.5x",
+    imgDescription: " Telephoto",
+  },
+];
 export const footerLinks = ["Privacy Policy", "Terms of Use", "Sales Policy", "Legal", "Site Map"];
-
-

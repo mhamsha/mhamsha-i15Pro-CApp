@@ -25,7 +25,7 @@ const HowItWorks = () => {
       {
         start: "top 90%",
         end: "bottom 35%",
-        toggleActions: "play reverse play reverse",
+        toggleActions: "play none none none",
       }
     );
     // * chip shimmer animation

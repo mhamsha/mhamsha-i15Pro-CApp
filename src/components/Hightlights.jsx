@@ -3,11 +3,30 @@ import { rightImg, watchImg } from "../utils";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import VideoCarousel from "./VideoCarousel";
-
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 const Hightlights = () => {
   useGSAP(() => {
-    gsap.to("#title", { opacity: 1, y: 0 });
-    gsap.to(".link", { opacity: 1, y: 0, duration: 1, stagger: 0.25 });
+    gsap.to("#title", {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: "#title",
+        start: "top bottom",
+        toggleActions: "play none none none",
+      },
+    });
+    gsap.to(".link", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: "#title",
+        start: "top bottom",
+        toggleActions: "play none none none",
+      },
+    });
   }, []);
   return (
     <section className="w-screen h-full overflow-hidden common-padding bg-zinc ">
