@@ -1,15 +1,19 @@
 import { sentryVitePlugin } from "@sentry/vite-plugin";
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), sentryVitePlugin({
-    org: "mhamsha",
-    project: "javascript-react"
-  })],
+  base: "/mhamsha-i15Pro-CApp",
+  plugins: [
+    react(),
+    sentryVitePlugin({
+      org: "mhamsha",
+      project: "mhamsha-i15pro-capp",
+    }),
+  ],
 
   build: {
-    sourcemap: true
-  }
-})
+    sourcemap: true,
+  },
+});
